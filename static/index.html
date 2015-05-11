@@ -1,86 +1,112 @@
 <!DOCTYPE html>
+<html>
+  
+  <head>
 <meta charset="utf-8">
-<link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700" rel="stylesheet">
-<link rel="stylesheet" href="/vendor/makerstrap.min.css">
-<link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.css">
-<style>
-html, body, .browser {
-  height: 100%;
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/font-face.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/perso.css">
+    <link rel="stylesheet" href="css/responsize.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/prism.css">
+    <link rel="stylesheet" href="css/bootstrap-responsive.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/codemirror.css">
 
-}
-
-.urlbar form {
-  display: flex;
-  display: -webkit-flex;
-  align-items: center;
-  -webkit-align-items: center;
-  background: #e3eaee; /* makerstrap @lightgrey */
-  padding: 10px 0 10px 10px;
-}
-
-.urlbar form > * {
-  margin-right: 10px;
-}
-
-.urlbar form > input[name=url] {
-  flex-grow: 1;
-  -webkit-flex-grow: 1;
-}
-
-.browser {
-  display: flex;
-  display: -webkit-flex;
-  flex-direction: column;
-  -webkit-flex-direction: column;
-}
-
-.browser > .content {
-  flex-grow: 1;
-  -webkit-flex-grow: 1;
-  position: relative;
-}
-
-.browser > .content > iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-</style>
-<title>Baseless Browser</title>
-<div class="browser">
-  <div class="urlbar">
-    <form action="/proxy">
-      <input spellcheck="false" type="text" name="url" class="form-control" placeholder="http://">
-      <button type="submit" class="btn btn-primary">
-        Go <i class="fa fa-chevron-right"></i>
-      </button>
-
-      <!-- We're hiding the togetherJS button for now, it's not
-           particularly useful yet. -->
-      <button id="togetherjs" class="btn btn-default" title="Collaborate" style="display: none">
-        <i class="fa fa-user-plus"></i>
-        <span class="hidden-xs">Collaborate</span>
-      </button>
-
-      <button id="webxray" class="btn btn-default" title="Goggles">
-        <i class="fa fa-code-fork"></i>
-        <span class="hidden-xs">Goggles</span>
-      </button>
-      <a id="spider" class="btn btn-default" href="/spider" target="_blank" title="Spider">
-        <i class="fa fa-bug"></i>
-        <span class="hidden-xs">Spider</span>
-      </a>
-      <a class="btn btn-default" href="/about/" target="_blank" title="About">
-        <i class="fa fa-question"></i>
-      </a>
-    </form>
-  </div>
-  <div class="content"></div>
-</div>
+    
+  </head>
+  <body>
+  <header style="height: auto; position: static;">
+      <div style="" class="container-fluid">
+        <div class="row-fluid">
+          <div class="span2">
+            <h1 style="text-align: center;"><img src="img/logo.png" alt=""></h1>
+          </div>
+          <div class="span6">
+            <div class="search">
+            <div class="browser">
+          <div class="urlbar">
+              <form action="/proxy">
+                <input type="text" spellcheck="false" name="url" class="form-control" placeholder="http://">
+                <img src="img/link.png" alt="">
+                <input type="submit" name="submit" value="Go">
+              </form>
+            </div>
+          </div>
+          </div>
+          </div>
+          <div class="span4">
+            
+          </div>
+        </div>
+      </div>
+    </header>    
+  <div class="row-fluid">
+      <div class="span9">
+        <div class="tools">
+          <a id="webxray" class="btn btn-default" title="Goggles">
+            <span class="hidden-xs">X</span>
+          </a>
+          <a id="spider" class="btn btn-default" href="/spider" target="_blank" title="Spider">
+                
+            <span class="hidden-xs">Spider</span>
+          </a>
+        </div>
+      </div>
+      <div class="container-fluid container-page">
+        <div class="row-fluid">
+          <div class="span9 selecto">
+            <div class="content"></div>
+          </div>
+          <div class="span3 sidebar">
+            <div class="command_buttons">
+              <ul class="clearfix">
+                <li class="span3"></li>
+                <li class="span3"></li>
+                <li class="span3"></li>
+                <li class="span3">
+                  <img src="img/img-validate.png">
+                </li>
+              </ul>
+            </div>
+            <div class="widget">
+              <div class="wid_title">
+                <h2>HTML</h2>
+              </div>
+              </div>
+            <div class="widget">
+              <div id="showcss" class="wid_title">
+                <h2>OLD CSS</h2>
+              </div>
+              <div class="wid_cont oldcss">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, quaerat, pariatur eius hic quasi tempora natus rerum eaque doloribus tenetur assumenda qui expedita impedit. Beatae quos quo assumenda laudantium eos!</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, quaerat, pariatur eius hic quasi tempora natus rerum eaque doloribus tenetur assumenda qui expedita impedit. Beatae quos quo assumenda laudantium eos!</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, quaerat, pariatur eius hic quasi tempora natus rerum eaque doloribus tenetur assumenda qui expedita impedit. Beatae quos quo assumenda laudantium eos!</p>
+              </div>
+            </div>
+            <div class="widget">
+              <div class="wid_title">
+                <h2>YOUR CSS</h2>
+              </div>
+              <div id="editcss" class="wid_cont yourcss">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, quaerat, pariatur eius hic quasi tempora natus rerum eaque doloribus tenetur assumenda qui expedita impedit. Beatae quos quo assumenda laudantium eos!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+<footer class="jumbotron">
+        <hr>
+        <p>CIFACOM 2014 - SILEXLABS</p>
+</footer>
 <script src="/js/bundle.js"></script>
+<script src="js/jquery.js" type="text/javascript"></script>
+<script src="js/live_preview_for_response.js" type="text/javascript"></script>
+<script src="js/responsize.js"></script>
 <script>
 var querystring = require('querystring');
 var urls = require('./lib/urls');
@@ -166,30 +192,7 @@ window.addEventListener('load', function() {
   onHashChange();
 });
 
-// TogetherJS integration
 
-document.getElementById("togetherjs").addEventListener('click', function(e) {
-  if (typeof(TogetherJS) == 'undefined')
-    return alert("TogetherJS is not available, please try later.");
-  TogetherJS(this);
-});
-
-window.addEventListener('hashchange', function() {
-  if (typeof(TogetherJS) == 'undefined' || !TogetherJS.running)
-    return;
-
-  TogetherJS.send({type: 'urlChange', url: getCurrentURL()});
-});
-
-TogetherJSConfig_hub_on = {
-  'urlChange': function(msg) {
-    gotoURL(msg.url);
-  },
-  'togetherjs.hello': function(msg) {
-    if (!msg.sameUrl) return;
-    TogetherJS.send({type: 'urlChange', url: getCurrentURL()});
-  }
-};
 
 // X-Ray Goggles integration
 
@@ -211,4 +214,7 @@ document.getElementById("webxray").addEventListener('click', function(e) {
   iframe.focus();
 });
 </script>
-<script src="//togetherjs.com/togetherjs-min.js" async></script>
+  
+  </body>
+
+</html>
